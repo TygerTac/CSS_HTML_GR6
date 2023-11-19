@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body{  /* Emsemble du page */
+    font-family: 'EB Garamond', serif;
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    color: rgb(126, 126, 126);
+}
+
+header{ /* Header */
+    display: flex;
+    background-color: #131111;
+    width: 100vw;
+    min-height: 10vh;
+    justify-content: center;
+}
+.titre{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    color: gold;
+}
+
+.logohry{
+    width: 100px;
+    height: 100px;
+}
+
+nav{  /* Navigation */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: #252525;
+    padding: 10px 0px;
+}
+
+.onglets{  /* Onglets de navigation */
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 5px;
+}
+.onglets a{ /* Si j'ai bien compris, ça sert à faire choisir les hyperlinks <a> dans l'onglets */
+    margin-right: 20px;
+    color: gold;
+}
+
+footer{ /* Footer */
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color:#8282829a;
+}
+
+.colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.finorga{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.articlebox{
+    display: flex;
+    width: 70vw;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-self: center;
+    margin-left: 15%;
+}
+
+.articleboxer{
+    display: flex;
+    width: 70vw;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-self: center;
+    margin-left: 15%;
+}
+
+.amogus{
+    color: rgb(253, 253, 253);
+}
+
+.imagepacks{
+    width: 20%;
+    height: 40%;
+    margin: 2%;
+}
+
+.amol{
+    color: gold;
+    min-height: 10vh;
+}
+
+
+
+@media screen and (max-height: 1500px){/* Nouvelles règles si la fenêtre fait  1024px de large ou moins */
+    .colonnes{
+        justify-content: space-evenly;
+    }
+    .article{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .articlebox{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .imagepacks{
+        width: 70%;
+        height: 70%;
+    }
+    p{
+        font-size: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px){/* Nouvelles règles si la fenêtre fait  1024px de large ou moins */
+    .colonnes{
+        justify-content: space-evenly;
+    }
+    .article{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .articlebox{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 10%;
+    }
+    .imagepacks{
+        width: 70%;
+        height: 70%;
+    }
+    p{
+        font-size: 30px;
+    }
+}
+
+
+ @media all and (max-device-width: 635px){/*pour le mobile on va utiliser le max-device-width car cela permet de cibler la largeur de l ecran */
+    .titre{
+        font-size: 30px;
+    }
+    .onglets{
+        font-size: 25px;
+    }
+    .logohry{
+        margin-top: 20px;
+    }
+    footer{
+        font-size: 30px;
+    }
+}

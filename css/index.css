@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body{  /* Emsemble du page */
+    font-family: 'EB Garamond', serif;
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    color: rgb(126, 126, 126);
+}
+
+header{ /* Header */
+    display: flex;
+    background-color: #131111;
+    width: 100vw;
+    min-height: 10vh;
+    justify-content: center;
+}
+
+.titre{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    color: gold;
+}
+
+.logohry{
+    width: 100px;
+    height: 100px;
+}
+
+nav{  /* Navigation */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: #252525;
+    padding: 10px 0px;
+}
+
+.onglets{  /* Onglets de navigation */
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 5px;
+}
+.onglets a{ /* Si j'ai bien compris, ça sert à faire choisir les hyperlinks <a> dans l'onglets */
+    margin-right: 20px;
+    color: gold;
+}
+
+.articles{
+    overflow: hidden;
+    position: relative;
+    min-height: 532px;
+}
+
+.introbackground{ /* à demander au prof */
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: -60%;
+    width: 110%;
+    min-height: 100%;
+    margin: -100px 0 0 -100px; /* Apparement utiliser pour centrer une image cropped */
+}
+
+.introductiondescription{
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    top: 50px;
+}
+
+.mobileimage{
+    display: none;
+}
+
+main{ /* le main corps, mdr */
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+footer{ /* Footer */
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color:#8282829a;
+}
+
+.colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.finorga{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px){/* Nouvelles règles si la fenêtre fait  1024px de large ou moins */
+    .introbackground{
+        display: none;
+    }
+    .introductiondescription{
+        position: relative;
+        top: auto;
+    }
+    .mobileimage{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: -20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    }
+    .colonnes{
+        justify-content: space-evenly;
+    }
+}
+
+
+ @media all and (max-device-width: 635px){/*pour le mobile on va utiliser le max-device-width car cela permet de cibler la largeur de l ecran */
+    .titre{
+        font-size: 30px;
+    }
+    .onglets{
+        font-size: 25px;
+    }
+    .introductiondescription{
+        position: relative;
+        font-size: 30px;
+    }
+    .logohry{
+        margin-top: 20px;
+    }
+    .mobileimage{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    footer{
+        font-size: 30px;
+    }
+}

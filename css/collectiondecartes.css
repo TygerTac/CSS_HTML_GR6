@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{  /* Emsemble du page */
+    font-family: 'EB Garamond', serif;
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    color: rgb(126, 126, 126);
+}
+
+header{ /* Header */
+    display: flex;
+    background-color: #131111;
+    width: 100vw;
+    min-height: 10vh;
+    justify-content: center;
+}
+.titre{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    color: gold;
+}
+
+.logohry{
+    width: 100px;
+    height: 100px;
+}
+
+nav{  /* Navigation */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: #252525;
+    padding: 10px 0px;
+}
+
+.onglets{  /* Onglets de navigation */
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 5px;
+}
+.onglets a{ /* Si j'ai bien compris, ça sert à faire choisir les hyperlinks <a> dans l'onglets */
+    margin-right: 20px;
+    color: gold;
+}
+
+footer{ /* Footer */
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color:#8282829a;
+}
+
+.colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.finorga{
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.collectiondecarterow{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.collectiondecartecolonne{
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin: 10px;
+}
+.titredefault{
+    font-size: 50px;
+    color: gold;
+    margin-left: 40%;
+}
+.cartetitre{
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    color: white;
+}
+.cartedescription{
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
+    color: white;
+}
+
+.carte{
+    box-shadow: 0 4px 8px 0 rgba(255, 254, 254, 0.2);
+    padding: 13px;
+    text-align: center;
+    background-color: #616161;
+}
+
+
+@media screen and (max-width: 1024px){/* Nouvelles règles si la fenêtre fait  1024px de large ou moins */
+    .colonnes{
+        justify-content: space-evenly;
+    }
+    .collectiondecarterow{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    .collectiondecartecolonne{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .unknowncarte{
+        display: none;
+    }
+}
+
+
+ @media all and (max-device-width: 635px){/*pour le mobile on va utiliser le max-device-width car cela permet de cibler la largeur de l ecran */
+    .titre{
+        font-size: 30px;
+    }
+    .onglets{
+        font-size: 25px;
+    }
+    .logohry{
+        margin-top: 20px;
+    }
+    footer{
+        font-size: 30px;
+    }
+}
